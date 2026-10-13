@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+  <title>Amirreza Jalili · Reliable &amp; Explainable AI for Medical Imaging</title>
+  <meta name="description" content="Amirreza Jalili, M.Sc. student in AI at the University of Tehran: deep learning for medical imaging that stays reliable on rare and difficult cases.">
+  <link rel="canonical" href="https://amirrezajalili.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Amirreza Jalili">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Amirreza Jalili · Reliable &amp; Explainable AI for Medical Imaging">
+  <meta property="og:description" content="Amirreza Jalili, M.Sc. student in AI at the University of Tehran: deep learning for medical imaging that stays reliable on rare and difficult cases.">
+  <meta property="og:url" content="https://amirrezajalili.github.io/">
+  <meta property="og:image" content="https://amirrezajalili.github.io/static/img/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Amirreza Jalili · Reliable &amp; Explainable AI for Medical Imaging">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Amirreza Jalili · Reliable &amp; Explainable AI for Medical Imaging">
+  <meta name="twitter:description" content="Amirreza Jalili, M.Sc. student in AI at the University of Tehran: deep learning for medical imaging that stays reliable on rare and difficult cases.">
+  <meta name="twitter:image" content="https://amirrezajalili.github.io/static/img/og-image.jpg">
+  <meta name="twitter:image:alt" content="Amirreza Jalili · Reliable &amp; Explainable AI for Medical Imaging">
+  
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebSite",
+   "@id": "https://amirrezajalili.github.io/#website",
+   "url": "https://amirrezajalili.github.io/",
+   "name": "Amirreza Jalili"
+  },
+  {
+   "@type": "ProfilePage",
+   "@id": "https://amirrezajalili.github.io/#profile",
+   "url": "https://amirrezajalili.github.io/",
+   "name": "Amirreza Jalili · Reliable & Explainable AI for Medical Imaging",
+   "isPartOf": {
+    "@id": "https://amirrezajalili.github.io/#website"
+   },
+   "mainEntity": {
+    "@id": "https://amirrezajalili.github.io/#person"
+   }
+  },
+  {
+   "@type": "Person",
+   "@id": "https://amirrezajalili.github.io/#person",
+   "name": "Amirreza Jalili",
+   "url": "https://amirrezajalili.github.io/",
+   "image": "https://amirrezajalili.github.io/static/img/portrait-960.jpg",
+   "jobTitle": "M.Sc. student in AI, University of Tehran",
+   "description": "Amirreza Jalili, M.Sc. student in AI at the University of Tehran: deep learning for medical imaging that stays reliable on rare and difficult cases.",
+   "knowsAbout": [
+    "Medical image segmentation",
+    "Classification on imbalanced data",
+    "Explainable AI",
+    "Deep learning",
+    "Medical imaging"
+   ],
+   "sameAs": [
+    "https://scholar.google.com/citations?user=8gmACFUAAAAJ&hl=en",
+    "https://github.com/AmirrezaJalili",
+    "https://www.linkedin.com/in/Amirreza-Jalili",
+    "https://www.researchgate.net/profile/Amirreza-Jalili-2"
+   ],
+   "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Tehran"
+   },
+   "alumniOf": [
+    {
+     "@type": "CollegeOrUniversity",
+     "name": "University of Tabriz"
+    }
+   ]
+  }
+ ]
+}
+  </script>
+  <meta name="google-site-verification" content="yuOfGrX0z-7y3vaSWXztrQRWeA-dMDYqw5DtqfJc4ik">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#070a10">
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+
+  <link rel="preload" href="/static/fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/static/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face { font-family: "Newsreader"; font-style: normal; font-weight: 200 800; font-display: swap;
+      src: url("/static/fonts/newsreader-latin-wght-normal.woff2") format("woff2"); }
+    @font-face { font-family: "Newsreader"; font-style: italic; font-weight: 200 800; font-display: swap;
+      src: url("/static/fonts/newsreader-latin-wght-italic.woff2") format("woff2"); }
+    @font-face { font-family: "Inter"; font-style: normal; font-weight: 100 900; font-display: swap;
+      src: url("/static/fonts/inter-latin-wght-normal.woff2") format("woff2"); }
+  </style>
+  <link rel="stylesheet" href="/static/css/main.css?v=8e031655a4">
+
+  
+  <script type="importmap">
+{
+  "imports": {
+    "gsap": "/static/vendor/gsap/gsap.min.js?v=5bccfd5371",
+    "lenis": "/static/vendor/lenis/lenis.min.js?v=639fb6213b",
+    "/static/js/angiogram.js": "/static/js/angiogram.js?v=04c6e79345",
+    "/static/js/cv-request.js": "/static/js/cv-request.js?v=d0f2078e13",
+    "/static/js/email.js": "/static/js/email.js?v=a1e19fb771",
+    "/static/js/explain.js": "/static/js/explain.js?v=3561825570",
+    "/static/js/lift.js": "/static/js/lift.js?v=d1d59c6fbb",
+    "/static/js/main.js": "/static/js/main.js?v=ddcae3d911",
+    "/static/js/mosaic.js": "/static/js/mosaic.js?v=b33a30a0b1",
+    "/static/js/site.js": "/static/js/site.js?v=af557e7cf9",
+    "/static/js/story.js": "/static/js/story.js?v=6de98535a7"
+  }
+}
+  </script>
+  
+<link rel="preload" as="image" type="image/webp" fetchpriority="high"
+      imagesrcset="/static/img/portrait-480.webp 480w, /static/img/portrait-960.webp 960w"
+      imagesizes="(max-width: 760px) 160px, 220px">
+
+</head>
+
+<body class="page-home" data-email="cmkuY2EudHVAaWxpbGFqYXplcnJpbWE=">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="navbar" id="navbar">
+    <a class="navbar__name" href="/#top">A. Jalili</a>
+    <nav aria-label="Main">
+      <ul class="navbar__links">
+        <li><a href="/#about">About</a></li>
+        <li><a href="/publications/">Publications</a></li>
+        <li><a href="/#cv">CV</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+<main id="main">
+  <div class="story" id="story">
+
+    
+    <section class="hero" id="top">
+      <div class="hero__inner" data-anim="hero">
+        <figure class="portrait">
+          <picture>
+            <source type="image/webp"
+                    srcset="/static/img/portrait-480.webp 480w, /static/img/portrait-960.webp 960w"
+                    sizes="(max-width: 760px) 160px, 220px">
+            <img src="/static/img/portrait-960.jpg" alt="Portrait of Amirreza Jalili"
+                 width="960" height="960" fetchpriority="high" decoding="async">
+          </picture>
+        </figure>
+        <p class="badge"><span class="badge__dot" aria-hidden="true"></span>Seeking PhD positions for 2027</p>
+        <h1 class="hero__name">Amirreza Jalili</h1>
+        <p class="hero__title">
+          <span>M.Sc. student in AI, University of Tehran</span><span>Reliable &amp; Explainable AI for Medical Imaging</span>
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="/publications/">Publications <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          <a class="btn" href="#contact" data-cv-request>Request CV <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></a>
+        </div>
+        <ul class="socials" aria-label="Profiles">
+          <li><a href="https://scholar.google.com/citations?user=8gmACFUAAAAJ&amp;hl=en" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg></a></li>
+<li><a href="https://github.com/AmirrezaJalili" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a></li>
+<li><a href="https://www.researchgate.net/profile/Amirreza-Jalili-2" target="_blank" rel="noopener" aria-label="ResearchGate" title="ResearchGate"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0-.112.437 8.365 8.365 0 0 0-.078.53 9 9 0 0 0-.05.727c-.01.282-.013.621-.013 1.016a31.121 31.123 0 0 0 .014 1.017 9 9 0 0 0 .05.727 7.946 7.946 0 0 0 .077.53h-.005a3.334 3.334 0 0 0 .113.438c.245.743.65 1.303 1.214 1.68.565.376 1.256.564 2.075.564.8 0 1.536-.213 2.105-.603.57-.39.94-.916 1.175-1.65.076-.235.135-.558.177-.93a10.9 10.9 0 0 0 .043-1.207v-.82c0-.095-.047-.142-.14-.142h-3.064c-.094 0-.14.047-.14.141v.956c0 .094.046.14.14.14h1.666c.056 0 .084.03.084.086 0 .36 0 .62-.036.865-.038.244-.1.447-.147.606-.108.385-.348.664-.638.876-.29.212-.738.35-1.227.35-.545 0-.901-.15-1.21-.353-.306-.203-.517-.454-.67-.915a3.136 3.136 0 0 1-.147-.762 17.366 17.367 0 0 1-.034-.656c-.01-.26-.014-.572-.014-.939a26.401 26.403 0 0 1 .014-.938 15.821 15.822 0 0 1 .035-.656 3.19 3.19 0 0 1 .148-.76 1.89 1.89 0 0 1 .742-1.01c.344-.244.593-.352 1.137-.352.508 0 .815.096 1.144.303.33.207.528.492.764.925.047.094.111.118.198.07l1.044-.43c.075-.048.09-.115.042-.199a3.549 3.549 0 0 0-.466-.742 3 3 0 0 0-.679-.607 3.313 3.313 0 0 0-.903-.41A4.068 4.068 0 0 0 19.586 0zM8.217 5.836c-1.69 0-3.036.086-4.297.086-1.146 0-2.291 0-3.007-.029v.831l1.088.2c.744.144 1.174.488 1.174 2.264v11.288c0 1.777-.43 2.12-1.174 2.263l-1.088.2v.832c.773-.029 2.12-.086 3.465-.086 1.29 0 2.951.057 3.667.086v-.831l-1.49-.2c-.773-.115-1.174-.487-1.174-2.264v-4.784c.688.057 1.29.057 2.206.057 1.748 3.123 3.41 5.472 4.355 6.56.86 1.032 2.177 1.691 3.839 1.691.487 0 1.003-.086 1.318-.23v-.744c-1.031 0-2.063-.716-2.808-1.518-1.26-1.376-2.95-3.582-4.355-6.074 2.32-.545 4.04-2.722 4.04-4.9 0-3.208-2.492-4.698-5.758-4.698zm-.515 1.29c2.406 0 3.839 1.26 3.839 3.552 0 2.263-1.547 3.782-4.097 3.782-.974 0-1.404-.03-2.063-.086v-7.19c.66-.059 1.547-.059 2.32-.059z"/></svg></a></li>
+<li><a href="https://www.linkedin.com/in/Amirreza-Jalili" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.84-2.05 3.79-2.05C21.4 8.65 22 11.1 22 14.3V21h-4v-5.9c0-1.4-.03-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1V21h-4z"/></svg></a></li>
+
+<li><a href="/#contact" aria-label="Email (contact section)" title="Email"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></a></li>
+
+        </ul>
+      </div>
+      <div class="hero__cue" data-anim="cue" aria-hidden="true"><span>Scroll</span></div>
+    </section>
+
+    
+    <section class="chapter chapter--coronary" id="coronary" aria-labelledby="coronary-heading">
+      <div class="chapter__sticky chapter__sticky--split">
+        
+<figure class="angio" data-anim="angio" id="angio">
+  <div class="angio__stage">
+    <div class="angio__stack">
+      <img class="angio__layer angio__image" src="/static/img/angiogram/arcade-syntax-124.webp" alt="X-ray coronary angiogram of the left coronary artery, with two stenoses outlined and the artery segments coloured by SYNTAX segment."
+           width="512" height="512" loading="lazy" decoding="async">
+
+      <svg class="angio__layer angio__segments" style="--z: 10" viewBox="0 0 512 512" aria-hidden="true">
+        
+        <g class="angio__seg" data-seg="0" data-label="5 · Left main" style="--c: #eef3fa">
+          <polygon points="95.7,165.6 103.7,163.1 113.0,159.7 124.5,156.8 132.8,154.7 143.1,152.2 153.1,151.0 163.0,165.3 150.6,173.4 144.7,172.7 137.1,172.7 132.1,176.1 129.7,176.4 125.0,176.7 119.9,176.7 115.5,177.7 108.2,181.2 102.3,185.8"/>
+        </g>
+        
+        <g class="angio__seg" data-seg="1" data-label="6 · LAD proximal" style="--c: #5fd4ff">
+          <polygon points="153.9,150.7 158.1,149.5 162.3,148.3 166.8,147.1 170.9,145.9 175.7,143.6 180.2,141.5 184.4,140.0 188.9,137.9 193.0,137.9 198.7,136.4 203.5,135.5 208.3,135.2 213.0,135.2 217.2,134.9 221.7,134.3 226.5,133.7 231.0,133.4 236.0,133.4 241.1,133.7 246.5,133.1 251.0,131.9 256.0,130.7 259.6,130.1 264.4,128.3 269.2,125.3 274.3,122.7 276.6,122.7 277.5,129.8 274.3,132.8 271.0,136.1 267.1,139.1 263.2,141.8 243.1,154.2 224.7,153.9 218.0,152.1 213.9,151.0 209.5,150.7 205.0,150.4 200.2,150.4 195.7,150.1 191.6,150.7 186.8,152.2 181.7,153.7 177.8,156.1 175.7,157.0 170.0,162.0 163.8,165.6"/>
+        </g>
+        
+        <g class="angio__seg" data-seg="2" data-label="9 · First diagonal" style="--c: #9ff3ff">
+          <polygon points="258.7,145.6 262.6,143.3 267.1,143.3 272.2,143.3 276.9,143.3 281.7,143.3 287.4,142.7 292.4,143.3 296.8,143.8 301.3,143.9 305.5,145.0 310.4,145.7 314.3,148.0 318.8,149.5 323.8,150.7 328.0,151.6 333.1,152.8 337.3,154.6 341.1,157.0 345.3,160.3 349.2,163.0 353.4,165.7 357.9,168.3 362.0,170.4 366.8,173.1 370.6,176.4 378.4,183.0 384.3,187.1 394.0,192.6 404.6,196.8 411.7,199.1 416.2,200.8 420.5,203.0 425.1,204.2 430.7,205.7 432.8,206.3 437.3,207.2 441.5,209.2 446.2,210.2 450.4,209.8 454.6,208.1 459.1,206.9 463.6,206.6 469.6,209.6 474.2,213.5 478.0,216.6 480.8,220.9 483.9,225.3 486.9,229.0 491.3,231.4 496.2,231.8 501.5,230.2 505.2,226.8 509.8,223.7 512.0,221.5 512.0,228.1 512.0,228.4 509.9,232.2 506.9,235.5 502.7,237.6 498.2,239.1 493.7,240.3 489.2,239.7 484.8,237.9 480.9,235.2 478.5,231.3 476.4,227.8 474.0,224.0 470.3,219.1 466.5,217.4 462.4,216.1 458.5,218.8 458.2,219.1 453.1,220.9 448.3,220.9 444.2,220.9 439.4,220.9 434.9,219.7 430.7,218.8 426.2,217.3 422.4,214.6 417.9,212.8 413.7,211.0 409.5,208.9 405.3,207.5 401.2,205.4 396.7,203.6 392.8,201.5 388.6,199.1 383.2,197.3 378.8,195.8 374.9,193.4 371.0,191.0 366.8,188.3 362.6,186.0 359.1,183.3 357.0,180.9 353.1,178.2 349.2,175.5 345.6,172.5 341.4,170.1 337.3,168.3 332.8,166.8 328.9,165.3 324.9,164.0 319.4,162.4 314.9,160.9 310.7,159.4 305.9,157.9 301.4,156.7 296.9,155.8 292.2,155.2 287.4,154.3 282.9,154.0 278.1,154.0 273.7,154.9 269.0,155.1 258.1,154.7 245.2,153.8"/>
+        </g>
+        
+        <g class="angio__seg" data-seg="3" data-label="11 · Proximal circumflex" style="--c: #4fe3a1">
+          <polygon points="159.9,167.8 161.4,171.4 163.7,174.8 166.0,178.2 168.9,181.8 169.1,185.9 169.9,190.2 172.2,193.6 174.8,197.2 176.9,200.8 179.4,207.0 181.5,210.3 183.6,213.7 185.3,217.3 187.2,221.4 189.7,225.0 192.1,228.3 194.1,231.7 198.0,233.8 201.6,235.6 204.9,237.6 209.0,240.6 202.4,247.1 199.3,246.4 196.0,242.7 190.1,241.2 186.2,238.5 182.3,235.5 179.6,231.7 177.2,227.2 174.8,222.7 172.1,219.1 169.2,215.2 166.2,211.6 162.9,208.1 161.1,203.9 158.7,199.4 158.7,194.3 158.7,189.5 158.7,185.1 157.3,181.5 154.7,178.2 150.9,174.1"/>
+        </g>
+        
+        <g class="angio__seg" data-seg="4" data-label="13 · Distal circumflex" style="--c: #26d0b2">
+          <polygon points="209.6,240.4 212.9,242.8 215.5,245.9 218.1,248.9 221.4,252.3 223.7,255.6 226.2,259.1 227.7,263.0 230.1,267.2 232.2,271.4 234.2,275.5 236.9,279.4 238.4,283.3 239.0,288.1 241.1,292.3 242.0,296.7 242.3,301.2 242.3,306.0 242.0,310.2 241.1,315.0 240.8,319.7 240.5,323.9 240.2,328.7 239.9,333.2 238.4,338.2 237.2,342.7 236.9,346.3 236.9,350.2 236.1,352.4 235.0,356.3 233.8,360.2 233.2,364.0 231.4,368.7 230.7,372.5 229.1,376.1 227.6,379.7 226.6,384.1 225.8,388.0 225.0,391.8 224.8,395.7 224.2,399.6 223.5,403.4 221.9,407.8 220.4,412.2 218.6,415.5 216.0,418.9 214.2,422.5 211.9,426.3 210.1,430.2 208.0,434.3 207.0,438.2 206.2,442.8 205.7,446.7 204.9,451.1 203.9,455.2 201.8,458.8 199.8,462.1 195.9,460.1 195.9,455.2 197.4,451.3 198.7,447.4 200.5,443.8 201.6,439.5 201.8,435.6 202.6,431.5 203.1,426.6 203.9,422.2 204.4,418.4 205.7,414.0 207.5,409.6 209.3,405.2 211.4,401.1 213.2,397.2 214.4,393.4 217.3,389.5 218.6,385.9 218.6,381.8 219.1,377.7 220.6,373.8 221.4,369.7 222.9,366.0 223.2,361.2 223.5,358.9 223.8,354.1 223.8,348.7 224.7,343.9 225.6,339.4 226.8,334.7 228.6,329.9 229.5,325.7 230.1,320.6 230.1,315.0 230.1,309.9 229.8,305.7 229.8,300.9 228.9,296.4 227.4,291.4 226.8,286.6 225.3,281.8 223.8,277.3 222.0,272.9 220.5,268.7 219.6,263.9 219.0,259.4 215.7,255.8 212.2,253.7 208.5,252.6 205.2,250.5 202.6,247.4"/>
+        </g>
+        
+        <g class="angio__seg" data-seg="5" data-label="14 · Left posterolateral" style="--c: #b9f3a2">
+          <polygon points="217.3,242.0 221.4,242.5 225.3,244.1 228.9,245.6 232.5,247.1 235.8,249.7 239.2,252.3 242.8,255.4 245.6,258.2 248.4,261.6 250.8,264.9 253.1,268.3 254.6,272.1 257.2,275.5 259.8,278.8 262.9,281.4 266.2,283.7 269.3,286.3 272.4,288.9 274.9,292.2 277.5,295.8 280.4,299.4 284.0,303.0 287.1,306.1 289.9,309.4 293.2,312.5 296.1,315.4 298.9,318.5 302.0,321.3 305.1,323.9 308.2,326.4 311.5,329.0 314.3,331.3 317.2,334.4 320.0,337.3 322.1,341.1 322.8,345.5 322.6,349.4 321.0,353.0 318.7,356.6 317.9,360.4 317.9,364.6 320.0,368.1 323.6,370.5 327.5,371.5 331.3,371.2 335.2,369.9 338.8,366.8 339.9,365.1 341.1,363.0 342.8,361.8 344.9,361.5 347.1,362.2 349.5,363.1 350.3,365.1 351.3,366.8 352.7,368.6 353.8,370.2 355.9,371.6 358.1,372.8 360.5,373.7 362.9,374.4 364.8,374.7 367.3,375.5 369.8,376.2 371.6,376.5 373.9,376.8 375.9,377.5 378.5,377.9 381.1,378.5 383.3,379.0 385.4,379.9 388.5,380.6 390.6,380.8 393.0,381.2 395.2,381.4 397.4,381.5 399.6,381.7 401.9,381.7 404.1,381.4 406.0,380.4 407.7,379.2 409.7,378.2 412.2,380.7 412.0,382.9 408.8,385.7 405.5,388.5 401.1,389.3 397.0,388.0 392.4,386.7 387.5,385.9 383.3,384.9 379.2,383.1 374.6,382.6 370.5,382.6 366.4,381.5 360.9,379.2 357.1,377.4 353.5,375.6 350.1,373.6 345.0,370.7 340.6,372.0 337.0,373.8 332.9,374.6 327.5,374.6 323.1,374.6 319.2,373.3 316.1,370.7 313.8,366.9 312.5,361.2 312.5,356.8 312.5,352.4 313.3,348.3 313.8,344.5 311.8,340.6 308.7,337.8 305.3,335.2 300.2,332.6 296.3,330.8 293.0,328.0 289.9,324.9 286.8,320.8 284.0,317.4 281.4,314.1 277.8,310.5 273.9,306.9 271.4,303.8 268.5,299.9 265.9,296.3 262.3,294.0 259.0,291.2 256.2,288.3 253.1,284.5 250.5,281.4 247.9,277.3 244.8,272.1 242.8,268.0 239.7,264.9 235.8,262.9 231.7,261.1 228.3,258.7 225.3,256.2 222.2,252.8 219.6,249.5 217.3,246.1 214.4,243.3"/>
+        </g>
+        
+      </svg>
+
+      <svg class="angio__layer angio__mask" style="--z: 16; --c: #ff3b4f" viewBox="0 0 512 512" aria-hidden="true">
+        <polygon points="182.8,234.1 193.2,244.5 201.4,250.5 208.0,253.6 214.4,255.8 222.0,257.8 230.0,248.8 221.1,244.1 212.6,240.9 206.3,237.9 199.8,232.7 194.3,227.4 189.0,220.7 176.8,227.3"/><polygon points="146.8,171.6 151.4,181.6 158.6,199.0 169.5,217.8 182.9,209.4 174.4,195.5 167.8,179.2 163.6,169.2 161.3,163.3"/>
+      </svg>
+
+      <svg class="angio__layer angio__boxes" style="--z: 22; --c: #ffd166" viewBox="0 0 512 512" aria-hidden="true">
+        
+        <rect class="angio__box" x="172.8" y="216.7" width="61.2" height="45.1" rx="3"
+              style="stroke-dasharray: 212.5; --len: 212.5"/>
+        <text class="angio__box-label" x="172.8" y="216.7" dy="-6">Stenosis</text>
+        
+        <rect class="angio__box" x="142.8" y="159.3" width="44.1" height="62.5" rx="3"
+              style="stroke-dasharray: 213.1; --len: 213.1"/>
+        <text class="angio__box-label" x="142.8" y="159.3" dy="-6">Stenosis</text>
+        
+      </svg>
+
+      <div class="angio__layer angio__labels" style="--z: 30" aria-hidden="true">
+        <span class="angio__badge" data-seg="0" style="left: 23.95%; top: 34.58%; --c: #eef3fa">5</span><span class="angio__badge" data-seg="1" style="left: 41.70%; top: 27.95%; --c: #5fd4ff">6</span><span class="angio__badge" data-seg="2" style="left: 76.43%; top: 38.25%; --c: #9ff3ff">9</span><span class="angio__badge" data-seg="3" style="left: 34.04%; top: 41.23%; --c: #4fe3a1">11</span><span class="angio__badge" data-seg="4" style="left: 44.91%; top: 68.47%; --c: #26d0b2">13</span><span class="angio__badge" data-seg="5" style="left: 61.42%; top: 65.92%; --c: #b9f3a2">14</span>
+      </div>
+    </div>
+    <div class="angio__tip" aria-hidden="true"></div>
+  </div>
+  <figcaption>
+    <ol class="fig__steps">
+      <li data-step="0"><span class="fig__step-text"><span class="fig__step-num">1</span>Detect stenosis</span><span class="fig__step-bar"></span></li><li data-step="1"><span class="fig__step-text"><span class="fig__step-num">2</span>Segment it</span><span class="fig__step-bar"></span></li><li data-step="2"><span class="fig__step-text"><span class="fig__step-num">3</span>Label SYNTAX segments</span><span class="fig__step-bar"></span></li>
+    </ol>
+    <p class="fig__credit"><a href="https://doi.org/10.1038/s41597-023-02871-z" target="_blank" rel="noopener">Image &amp; labels: ARCADE dataset (Popov et al., Scientific Data, 2024)</a><span class="fig__hint"> · Hover to separate the layers</span></p>
+  </figcaption>
+</figure>
+
+        <div class="chapter__text" data-anim="coronary-text">
+          <p class="eyebrow">Segmentation · M.Sc. thesis</p>
+          <h2 id="coronary-heading">Reading the coronary arteries</h2>
+          <p>In X-ray coronary angiography, a narrowing (stenosis) has to be found, outlined, and placed in the right segment of the coronary tree. Together these feed the SYNTAX score, which helps cardiologists choose between a stent and bypass surgery.</p><p>My M.Sc. thesis works on this problem: stenosis detection in X-ray coronary angiograms, on the stenosis task of the ARCADE dataset, where this image comes from. In my PhD I want to take it further, towards models that stay reliable on small, rare narrowings and can tell when their own answer might be wrong.</p>
+          
+          <p class="legend__title">SYNTAX segments in this image</p>
+          <ul class="legend">
+            <li class="legend__item" data-seg="0" style="--c: #eef3fa" tabindex="0"><span class="legend__code">5</span>Left main</li><li class="legend__item" data-seg="1" style="--c: #5fd4ff" tabindex="0"><span class="legend__code">6</span>LAD proximal</li><li class="legend__item" data-seg="2" style="--c: #9ff3ff" tabindex="0"><span class="legend__code">9</span>First diagonal</li><li class="legend__item" data-seg="3" style="--c: #4fe3a1" tabindex="0"><span class="legend__code">11</span>Proximal circumflex</li><li class="legend__item" data-seg="4" style="--c: #26d0b2" tabindex="0"><span class="legend__code">13</span>Distal circumflex</li><li class="legend__item" data-seg="5" style="--c: #b9f3a2" tabindex="0"><span class="legend__code">14</span>Left posterolateral</li>
+          </ul>
+          
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="chapter chapter--imbalance" id="imbalance" aria-labelledby="imbalance-heading">
+      <div class="chapter__sticky chapter__sticky--split chapter__sticky--reverse">
+        <div class="chapter__text" data-anim="imbalance-text">
+          <p class="eyebrow">Classification on imbalanced data</p>
+          <h2 id="imbalance-heading">Finding the rare case</h2>
+          <p>Medical data is rarely balanced. When one class is much rarer than the rest, a model can reach high accuracy by never predicting it at all, and miss exactly the patients who need it most.</p><p>I work on classifiers that stay reliable on rare classes and difficult cases: training that gives the minority class a real voice, and evaluation that counts how many rare cases were found, not only overall accuracy.</p>
+          <p class="legend__title">In this mosaic</p>
+          <ul class="legend">
+            <li class="legend__item" style="--c: #94a1b5"><span class="legend__code">26</span>No tumor</li><li class="legend__item" style="--c: #7fe0ee"><span class="legend__code">26</span>Meningioma</li><li class="legend__item" style="--c: #b69cff"><span class="legend__code">26</span>Pituitary</li><li class="legend__item legend__item--rare" style="--c: #ffb35c"><span class="legend__code">6</span>Glioma · rare</li>
+          </ul>
+        </div>
+        
+<figure class="mosaic" data-anim="mosaic" id="mosaic">
+  <div class="mosaic__stage">
+    <div class="mosaic__stack" style="aspect-ratio: 1536 / 896">
+      <img class="mosaic__layer mosaic__image" src="/static/img/mosaic/brisc-mosaic.webp" alt="A mosaic of 84 brain MRI slices: 78 belong to common classes and only 6 to the rare class (glioma)."
+           width="1536" height="896" loading="lazy" decoding="async">
+
+      <svg class="mosaic__layer mosaic__covers" viewBox="0 0 1536 896" aria-hidden="true">
+        <rect x="5" y="5" width="118" height="118" rx="10"/><rect x="133" y="5" width="118" height="118" rx="10"/><rect x="261" y="5" width="118" height="118" rx="10"/><rect x="389" y="5" width="118" height="118" rx="10"/><rect x="517" y="5" width="118" height="118" rx="10"/><rect x="645" y="5" width="118" height="118" rx="10"/><rect x="773" y="5" width="118" height="118" rx="10"/><rect x="901" y="5" width="118" height="118" rx="10"/><rect x="1029" y="5" width="118" height="118" rx="10"/><rect x="1157" y="5" width="118" height="118" rx="10"/><rect x="1285" y="5" width="118" height="118" rx="10"/><rect x="1413" y="5" width="118" height="118" rx="10"/><rect x="5" y="133" width="118" height="118" rx="10"/><rect x="133" y="133" width="118" height="118" rx="10"/><rect x="261" y="133" width="118" height="118" rx="10"/><rect x="389" y="133" width="118" height="118" rx="10"/><rect x="517" y="133" width="118" height="118" rx="10"/><rect x="645" y="133" width="118" height="118" rx="10"/><rect x="773" y="133" width="118" height="118" rx="10"/><rect x="901" y="133" width="118" height="118" rx="10"/><rect x="1029" y="133" width="118" height="118" rx="10"/><rect x="1157" y="133" width="118" height="118" rx="10"/><rect x="1285" y="133" width="118" height="118" rx="10"/><rect x="1413" y="133" width="118" height="118" rx="10"/><rect x="5" y="261" width="118" height="118" rx="10"/><rect x="133" y="261" width="118" height="118" rx="10"/><rect x="261" y="261" width="118" height="118" rx="10"/><rect x="389" y="261" width="118" height="118" rx="10"/><rect x="517" y="261" width="118" height="118" rx="10"/><rect x="645" y="261" width="118" height="118" rx="10"/><rect x="773" y="261" width="118" height="118" rx="10"/><rect x="901" y="261" width="118" height="118" rx="10"/><rect x="1029" y="261" width="118" height="118" rx="10"/><rect x="1157" y="261" width="118" height="118" rx="10"/><rect x="1285" y="261" width="118" height="118" rx="10"/><rect x="1413" y="261" width="118" height="118" rx="10"/><rect x="5" y="389" width="118" height="118" rx="10"/><rect x="133" y="389" width="118" height="118" rx="10"/><rect x="261" y="389" width="118" height="118" rx="10"/><rect x="389" y="389" width="118" height="118" rx="10"/><rect x="517" y="389" width="118" height="118" rx="10"/><rect x="645" y="389" width="118" height="118" rx="10"/><rect x="773" y="389" width="118" height="118" rx="10"/><rect x="901" y="389" width="118" height="118" rx="10"/><rect x="1029" y="389" width="118" height="118" rx="10"/><rect x="1157" y="389" width="118" height="118" rx="10"/><rect x="1285" y="389" width="118" height="118" rx="10"/><rect x="1413" y="389" width="118" height="118" rx="10"/><rect x="5" y="517" width="118" height="118" rx="10"/><rect x="133" y="517" width="118" height="118" rx="10"/><rect x="261" y="517" width="118" height="118" rx="10"/><rect x="389" y="517" width="118" height="118" rx="10"/><rect x="517" y="517" width="118" height="118" rx="10"/><rect x="645" y="517" width="118" height="118" rx="10"/><rect x="773" y="517" width="118" height="118" rx="10"/><rect x="901" y="517" width="118" height="118" rx="10"/><rect x="1029" y="517" width="118" height="118" rx="10"/><rect x="1157" y="517" width="118" height="118" rx="10"/><rect x="1285" y="517" width="118" height="118" rx="10"/><rect x="1413" y="517" width="118" height="118" rx="10"/><rect x="5" y="645" width="118" height="118" rx="10"/><rect x="133" y="645" width="118" height="118" rx="10"/><rect x="261" y="645" width="118" height="118" rx="10"/><rect x="389" y="645" width="118" height="118" rx="10"/><rect x="517" y="645" width="118" height="118" rx="10"/><rect x="645" y="645" width="118" height="118" rx="10"/><rect x="773" y="645" width="118" height="118" rx="10"/><rect x="901" y="645" width="118" height="118" rx="10"/><rect x="1029" y="645" width="118" height="118" rx="10"/><rect x="1157" y="645" width="118" height="118" rx="10"/><rect x="1285" y="645" width="118" height="118" rx="10"/><rect x="1413" y="645" width="118" height="118" rx="10"/><rect x="5" y="773" width="118" height="118" rx="10"/><rect x="133" y="773" width="118" height="118" rx="10"/><rect x="261" y="773" width="118" height="118" rx="10"/><rect x="389" y="773" width="118" height="118" rx="10"/><rect x="517" y="773" width="118" height="118" rx="10"/><rect x="645" y="773" width="118" height="118" rx="10"/><rect x="773" y="773" width="118" height="118" rx="10"/><rect x="901" y="773" width="118" height="118" rx="10"/><rect x="1029" y="773" width="118" height="118" rx="10"/><rect x="1157" y="773" width="118" height="118" rx="10"/><rect x="1285" y="773" width="118" height="118" rx="10"/><rect x="1413" y="773" width="118" height="118" rx="10"/>
+      </svg>
+
+      <svg class="mosaic__layer mosaic__classes" style="--z: 12" viewBox="0 0 1536 896" aria-hidden="true">
+        <circle class="mosaic__dot" cx="109" cy="19" r="7" style="--c: #7fe0ee"/><circle class="mosaic__dot" cx="237" cy="19" r="7" style="--c: #7fe0ee"/><circle class="mosaic__dot" cx="365" cy="19" r="7" style="--c: #94a1b5"/><circle class="mosaic__dot" cx="493" cy="19" r="7" style="--c: #b69cff"/><circle class="mosaic__dot" cx="621" cy="19" r="7" style="--c: #ffb35c"/><circle class="mosaic__dot" cx="749" cy="19" r="7" style="--c: #b69cff"/><circle class="mosaic__dot" cx="877" cy="19" r="7" style="--c: #94a1b5"/><circle class="mosaic__dot" cx="1005" cy="19" r="7" style="--c: #94a1b5"/><circle class="mosaic__dot" cx="1133" cy="19" r="7" style="--c: #94a1b5"/><circle class="mosaic__dot" cx="1261" cy="19" r="7" style="--c: #94a1b5"/><circle class="mosaic__dot" cx="1389" cy="19" r="7" style="--c: #7fe0ee"/><circle class="mosaic__dot" cx="1517" cy="19" r="7" style="--c: #b69cff"/><circle class="mosaic__dot" cx="109" cy="147" r="7" style="--c: #b69cff"/><circle class="mosaic__dot" cx="237" cy="147" r="7" style="--c: #94a1b5"/><circle class="mosaic__dot" cx="365" cy="147" r="7" style="--c: #94a1b5"/><circle class="mosaic__dot" cx="493" cy="147" r="7" style="--c: #7fe0ee"/><circle class="mosaic__dot" cx="621" cy="147" r="7" style="--c: #b69cff"/><circle class="mosaic__dot" cx="749" cy="147" r="7" style="--c: #7fe0ee"/><circle class="mosaic__dot" cx="877" cy="147" r="7" style="--c: #94a1b5"/><circle class="mosaic__dot" cx="1005" cy="147" r="7" style="--c: #7fe0ee"/><circle class="mosaic__dot" cx="1133" cy="147" r="7" style="--c: #b69cff"/><circle class="mosaic__dot" cx="1261" cy="147" r="7" style="--c: #ffb35c"/><circle class="mosaic__dot" cx="1389" cy="147" r="7" style="--c: #b69cff"/><circle class="mosaic__dot" cx="1517" cy="147" r="7" style="--c: #b69cff"/><circle class="mosaic__dot" cx="109" cy="275" r="7" style="--c: #7fe0ee"/><circle class="mosaic__dot" cx="237" cy="275" r="7" style="--c: #7fe0ee"/><circle class="mosaic__dot" cx="365" cy="275" r="7" style="--c: #94a1b5"/><circle class="mosaic__dot" cx="493" cy="275" r="7" style="--c: #ffb35c"/><circle class="mosaic__dot" cx="621" cy="275" r="7" style="--c: #b69cff"/><circle class="mosaic__dot" cx="749" cy="275" r="7" style="--c: #b69cff"/><circle class="mosaic__dot" cx="877" cy="275" r="7" style="--c: #7fe0ee"/><circle class="mosaic__dot" cx="1005" cy="275" r="7" style="--c: #b69cff"/><circle class="mosaic__dot" cx="1133" cy="275" r="7" style="--c: #b69cff"/><circle class="mosaic__dot" cx="1261" cy="275" r="7" style="--c: #b69cff"/><circle class="mosaic__dot" cx="1389" cy="275" r="7" style="--c: #7fe0ee"/><circle class="mosaic__dot" cx="1517" cy="275" r="7" style="--c: #7fe0ee"/><circle class="mosaic__dot" cx="109" cy="403" r="7" style="--c: #94a1b5"/><circle class="mosaic__dot" cx="237" cy="403" r="7" style="--c: #ffb35c"/><circle class="mosaic__dot" cx="365" cy="403" r="7" style="--c: #b69cff"/><circle class="mosaic__dot" cx="493" cy="403" r="7" style="--c: #b69cff"/><circle class="mosaic__dot" cx="621" cy="403" r="7" style="--c: #b69cff"/><circle class="mosaic__dot" cx="749" cy="403" r="7" style="--c: #7fe0ee"/><circle class="mosaic__dot" cx="877" cy="403" r="7" style="--c: #94a1b5"/><circle class="mosaic__dot" cx="1005" cy="403" r="7" style="--c: #b69cff"/><circle class="mosaic__dot" cx="1133" cy="403" r="7" style="--c: #b69cff"/><circle class="mosaic__dot" cx="1261" cy="403" r="7" style="--c: #7fe0ee"/><circle class="mosaic__dot" cx="1389" cy="403" r="7" style="--c: #94a1b5"/><circle class="mosaic__dot" cx="1517" cy="403" r="7" style="--c: #7fe0ee"/><circle class="mosaic__dot" cx="109" cy="531" r="7" style="--c: #7fe0ee"/><circle class="mosaic__dot" cx="237" cy="531" r="7" style="--c: #7fe0ee"/><circle class="mosaic__dot" cx="365" cy="531" r="7" style="--c: #7fe0ee"/><circle class="mosaic__dot" cx="493" cy="531" r="7" style="--c: #94a1b5"/><circle class="mosaic__dot" cx="621" cy="531" r="7" style="--c: #7fe0ee"/><circle class="mosaic__dot" cx="749" cy="531" r="7" style="--c: #94a1b5"/><circle class="mosaic__dot" cx="877" cy="531" r="7" style="--c: #b69cff"/><circle class="mosaic__dot" cx="1005" cy="531" r="7" style="--c: #7fe0ee"/><circle class="mosaic__dot" cx="1133" cy="531" r="7" style="--c: #b69cff"/><circle class="mosaic__dot" cx="1261" cy="531" r="7" style="--c: #ffb35c"/><circle class="mosaic__dot" cx="1389" cy="531" r="7" style="--c: #94a1b5"/><circle class="mosaic__dot" cx="1517" cy="531" r="7" style="--c: #7fe0ee"/><circle class="mosaic__dot" cx="109" cy="659" r="7" style="--c: #94a1b5"/><circle class="mosaic__dot" cx="237" cy="659" r="7" style="--c: #94a1b5"/><circle class="mosaic__dot" cx="365" cy="659" r="7" style="--c: #94a1b5"/><circle class="mosaic__dot" cx="493" cy="659" r="7" style="--c: #94a1b5"/><circle class="mosaic__dot" cx="621" cy="659" r="7" style="--c: #7fe0ee"/><circle class="mosaic__dot" cx="749" cy="659" r="7" style="--c: #7fe0ee"/><circle class="mosaic__dot" cx="877" cy="659" r="7" style="--c: #ffb35c"/><circle class="mosaic__dot" cx="1005" cy="659" r="7" style="--c: #b69cff"/><circle class="mosaic__dot" cx="1133" cy="659" r="7" style="--c: #b69cff"/><circle class="mosaic__dot" cx="1261" cy="659" r="7" style="--c: #94a1b5"/><circle class="mosaic__dot" cx="1389" cy="659" r="7" style="--c: #94a1b5"/><circle class="mosaic__dot" cx="1517" cy="659" r="7" style="--c: #94a1b5"/><circle class="mosaic__dot" cx="109" cy="787" r="7" style="--c: #b69cff"/><circle class="mosaic__dot" cx="237" cy="787" r="7" style="--c: #94a1b5"/><circle class="mosaic__dot" cx="365" cy="787" r="7" style="--c: #b69cff"/><circle class="mosaic__dot" cx="493" cy="787" r="7" style="--c: #7fe0ee"/><circle class="mosaic__dot" cx="621" cy="787" r="7" style="--c: #b69cff"/><circle class="mosaic__dot" cx="749" cy="787" r="7" style="--c: #7fe0ee"/><circle class="mosaic__dot" cx="877" cy="787" r="7" style="--c: #7fe0ee"/><circle class="mosaic__dot" cx="1005" cy="787" r="7" style="--c: #b69cff"/><circle class="mosaic__dot" cx="1133" cy="787" r="7" style="--c: #94a1b5"/><circle class="mosaic__dot" cx="1261" cy="787" r="7" style="--c: #7fe0ee"/><circle class="mosaic__dot" cx="1389" cy="787" r="7" style="--c: #94a1b5"/><circle class="mosaic__dot" cx="1517" cy="787" r="7" style="--c: #94a1b5"/>
+        <rect class="mosaic__rare" x="517" y="5" width="118" height="118" rx="10" style="--c: #ffb35c"/><rect class="mosaic__rare" x="1157" y="133" width="118" height="118" rx="10" style="--c: #ffb35c"/><rect class="mosaic__rare" x="389" y="261" width="118" height="118" rx="10" style="--c: #ffb35c"/><rect class="mosaic__rare" x="133" y="389" width="118" height="118" rx="10" style="--c: #ffb35c"/><rect class="mosaic__rare" x="1157" y="517" width="118" height="118" rx="10" style="--c: #ffb35c"/><rect class="mosaic__rare" x="773" y="645" width="118" height="118" rx="10" style="--c: #ffb35c"/>
+      </svg>
+
+      <svg class="mosaic__layer mosaic__marks" style="--z: 24" viewBox="0 0 1536 896" aria-hidden="true">
+        
+        <g class="mosaic__miss is-resolved" transform="translate(576.0 64.0)">
+          <circle r="26"/><path d="M-11,-11 L11,11 M11,-11 L-11,11"/>
+        </g>
+        <g class="mosaic__found" transform="translate(576.0 64.0)">
+          <circle r="26"/><path d="M-12,1 L-3,10 L13,-9"/>
+        </g>
+        
+        <g class="mosaic__alarm" transform="translate(1472.0 64.0)">
+          <circle r="26"/><path d="M0,-12 L0,4 M0,11 L0,12"/>
+        </g>
+        
+        <g class="mosaic__miss is-resolved" transform="translate(1216.0 192.0)">
+          <circle r="26"/><path d="M-11,-11 L11,11 M11,-11 L-11,11"/>
+        </g>
+        <g class="mosaic__found" transform="translate(1216.0 192.0)">
+          <circle r="26"/><path d="M-12,1 L-3,10 L13,-9"/>
+        </g>
+        
+        <g class="mosaic__miss is-resolved" transform="translate(448.0 320.0)">
+          <circle r="26"/><path d="M-11,-11 L11,11 M11,-11 L-11,11"/>
+        </g>
+        <g class="mosaic__found" transform="translate(448.0 320.0)">
+          <circle r="26"/><path d="M-12,1 L-3,10 L13,-9"/>
+        </g>
+        
+        <g class="mosaic__miss is-resolved" transform="translate(192.0 448.0)">
+          <circle r="26"/><path d="M-11,-11 L11,11 M11,-11 L-11,11"/>
+        </g>
+        <g class="mosaic__found" transform="translate(192.0 448.0)">
+          <circle r="26"/><path d="M-12,1 L-3,10 L13,-9"/>
+        </g>
+        
+        <g class="mosaic__miss" transform="translate(1216.0 576.0)">
+          <circle r="26"/><path d="M-11,-11 L11,11 M11,-11 L-11,11"/>
+        </g>
+        
+        
+        <g class="mosaic__miss is-resolved" transform="translate(832.0 704.0)">
+          <circle r="26"/><path d="M-11,-11 L11,11 M11,-11 L-11,11"/>
+        </g>
+        <g class="mosaic__found" transform="translate(832.0 704.0)">
+          <circle r="26"/><path d="M-12,1 L-3,10 L13,-9"/>
+        </g>
+        
+      </svg>
+
+      <svg class="mosaic__layer mosaic__hits" style="--z: 24" viewBox="0 0 1536 896" aria-hidden="true">
+        <rect x="5" y="5" width="118" height="118" rx="10"
+          data-label="Meningioma"/><rect x="133" y="5" width="118" height="118" rx="10"
+          data-label="Meningioma"/><rect x="261" y="5" width="118" height="118" rx="10"
+          data-label="No tumor"/><rect x="389" y="5" width="118" height="118" rx="10"
+          data-label="Pituitary"/><rect x="517" y="5" width="118" height="118" rx="10"
+          data-label="Glioma · rare class · found"/><rect x="645" y="5" width="118" height="118" rx="10"
+          data-label="Pituitary"/><rect x="773" y="5" width="118" height="118" rx="10"
+          data-label="No tumor"/><rect x="901" y="5" width="118" height="118" rx="10"
+          data-label="No tumor"/><rect x="1029" y="5" width="118" height="118" rx="10"
+          data-label="No tumor"/><rect x="1157" y="5" width="118" height="118" rx="10"
+          data-label="No tumor"/><rect x="1285" y="5" width="118" height="118" rx="10"
+          data-label="Meningioma"/><rect x="1413" y="5" width="118" height="118" rx="10"
+          data-label="Pituitary · false alarm"/><rect x="5" y="133" width="118" height="118" rx="10"
+          data-label="Pituitary"/><rect x="133" y="133" width="118" height="118" rx="10"
+          data-label="No tumor"/><rect x="261" y="133" width="118" height="118" rx="10"
+          data-label="No tumor"/><rect x="389" y="133" width="118" height="118" rx="10"
+          data-label="Meningioma"/><rect x="517" y="133" width="118" height="118" rx="10"
+          data-label="Pituitary"/><rect x="645" y="133" width="118" height="118" rx="10"
+          data-label="Meningioma"/><rect x="773" y="133" width="118" height="118" rx="10"
+          data-label="No tumor"/><rect x="901" y="133" width="118" height="118" rx="10"
+          data-label="Meningioma"/><rect x="1029" y="133" width="118" height="118" rx="10"
+          data-label="Pituitary"/><rect x="1157" y="133" width="118" height="118" rx="10"
+          data-label="Glioma · rare class · found"/><rect x="1285" y="133" width="118" height="118" rx="10"
+          data-label="Pituitary"/><rect x="1413" y="133" width="118" height="118" rx="10"
+          data-label="Pituitary"/><rect x="5" y="261" width="118" height="118" rx="10"
+          data-label="Meningioma"/><rect x="133" y="261" width="118" height="118" rx="10"
+          data-label="Meningioma"/><rect x="261" y="261" width="118" height="118" rx="10"
+          data-label="No tumor"/><rect x="389" y="261" width="118" height="118" rx="10"
+          data-label="Glioma · rare class · found"/><rect x="517" y="261" width="118" height="118" rx="10"
+          data-label="Pituitary"/><rect x="645" y="261" width="118" height="118" rx="10"
+          data-label="Pituitary"/><rect x="773" y="261" width="118" height="118" rx="10"
+          data-label="Meningioma"/><rect x="901" y="261" width="118" height="118" rx="10"
+          data-label="Pituitary"/><rect x="1029" y="261" width="118" height="118" rx="10"
+          data-label="Pituitary"/><rect x="1157" y="261" width="118" height="118" rx="10"
+          data-label="Pituitary"/><rect x="1285" y="261" width="118" height="118" rx="10"
+          data-label="Meningioma"/><rect x="1413" y="261" width="118" height="118" rx="10"
+          data-label="Meningioma"/><rect x="5" y="389" width="118" height="118" rx="10"
+          data-label="No tumor"/><rect x="133" y="389" width="118" height="118" rx="10"
+          data-label="Glioma · rare class · found"/><rect x="261" y="389" width="118" height="118" rx="10"
+          data-label="Pituitary"/><rect x="389" y="389" width="118" height="118" rx="10"
+          data-label="Pituitary"/><rect x="517" y="389" width="118" height="118" rx="10"
+          data-label="Pituitary"/><rect x="645" y="389" width="118" height="118" rx="10"
+          data-label="Meningioma"/><rect x="773" y="389" width="118" height="118" rx="10"
+          data-label="No tumor"/><rect x="901" y="389" width="118" height="118" rx="10"
+          data-label="Pituitary"/><rect x="1029" y="389" width="118" height="118" rx="10"
+          data-label="Pituitary"/><rect x="1157" y="389" width="118" height="118" rx="10"
+          data-label="Meningioma"/><rect x="1285" y="389" width="118" height="118" rx="10"
+          data-label="No tumor"/><rect x="1413" y="389" width="118" height="118" rx="10"
+          data-label="Meningioma"/><rect x="5" y="517" width="118" height="118" rx="10"
+          data-label="Meningioma"/><rect x="133" y="517" width="118" height="118" rx="10"
+          data-label="Meningioma"/><rect x="261" y="517" width="118" height="118" rx="10"
+          data-label="Meningioma"/><rect x="389" y="517" width="118" height="118" rx="10"
+          data-label="No tumor"/><rect x="517" y="517" width="118" height="118" rx="10"
+          data-label="Meningioma"/><rect x="645" y="517" width="118" height="118" rx="10"
+          data-label="No tumor"/><rect x="773" y="517" width="118" height="118" rx="10"
+          data-label="Pituitary"/><rect x="901" y="517" width="118" height="118" rx="10"
+          data-label="Meningioma"/><rect x="1029" y="517" width="118" height="118" rx="10"
+          data-label="Pituitary"/><rect x="1157" y="517" width="118" height="118" rx="10"
+          data-label="Glioma · rare class · still missed"/><rect x="1285" y="517" width="118" height="118" rx="10"
+          data-label="No tumor"/><rect x="1413" y="517" width="118" height="118" rx="10"
+          data-label="Meningioma"/><rect x="5" y="645" width="118" height="118" rx="10"
+          data-label="No tumor"/><rect x="133" y="645" width="118" height="118" rx="10"
+          data-label="No tumor"/><rect x="261" y="645" width="118" height="118" rx="10"
+          data-label="No tumor"/><rect x="389" y="645" width="118" height="118" rx="10"
+          data-label="No tumor"/><rect x="517" y="645" width="118" height="118" rx="10"
+          data-label="Meningioma"/><rect x="645" y="645" width="118" height="118" rx="10"
+          data-label="Meningioma"/><rect x="773" y="645" width="118" height="118" rx="10"
+          data-label="Glioma · rare class · found"/><rect x="901" y="645" width="118" height="118" rx="10"
+          data-label="Pituitary"/><rect x="1029" y="645" width="118" height="118" rx="10"
+          data-label="Pituitary"/><rect x="1157" y="645" width="118" height="118" rx="10"
+          data-label="No tumor"/><rect x="1285" y="645" width="118" height="118" rx="10"
+          data-label="No tumor"/><rect x="1413" y="645" width="118" height="118" rx="10"
+          data-label="No tumor"/><rect x="5" y="773" width="118" height="118" rx="10"
+          data-label="Pituitary"/><rect x="133" y="773" width="118" height="118" rx="10"
+          data-label="No tumor"/><rect x="261" y="773" width="118" height="118" rx="10"
+          data-label="Pituitary"/><rect x="389" y="773" width="118" height="118" rx="10"
+          data-label="Meningioma"/><rect x="517" y="773" width="118" height="118" rx="10"
+          data-label="Pituitary"/><rect x="645" y="773" width="118" height="118" rx="10"
+          data-label="Meningioma"/><rect x="773" y="773" width="118" height="118" rx="10"
+          data-label="Meningioma"/><rect x="901" y="773" width="118" height="118" rx="10"
+          data-label="Pituitary"/><rect x="1029" y="773" width="118" height="118" rx="10"
+          data-label="No tumor"/><rect x="1157" y="773" width="118" height="118" rx="10"
+          data-label="Meningioma"/><rect x="1285" y="773" width="118" height="118" rx="10"
+          data-label="No tumor"/><rect x="1413" y="773" width="118" height="118" rx="10"
+          data-label="No tumor"/>
+      </svg>
+    </div>
+    <div class="mosaic__tip" aria-hidden="true"></div>
+  </div>
+  <figcaption>
+    <div class="mosaic__stats" data-rare-total="6" data-naive="93"
+         data-balanced="98" data-found="5">
+      <p class="stat"><span class="stat__value" data-stat="accuracy">98%</span><span class="stat__label">Accuracy</span></p>
+      <p class="stat stat--rare"><span class="stat__value" data-stat="found">5 / 6</span><span class="stat__label">Glioma cases found</span></p>
+      <p class="mosaic__key"><span class="mosaic__key-found">✓ found</span><span class="mosaic__key-miss">✕ missed</span><span class="mosaic__key-alarm">! false alarm</span></p>
+    </div>
+    <ol class="fig__steps">
+      <li data-step="0"><span class="fig__step-text"><span class="fig__step-num">1</span>The data</span><span class="fig__step-bar"></span></li><li data-step="1"><span class="fig__step-text"><span class="fig__step-num">2</span>Accuracy hides it</span><span class="fig__step-bar"></span></li><li data-step="2"><span class="fig__step-text"><span class="fig__step-num">3</span>Find the rare cases</span><span class="fig__step-bar"></span></li>
+    </ol>
+    <p class="fig__credit"><a href="https://doi.org/10.1038/s41597-026-06753-y" target="_blank" rel="noopener">Images: BRISC 2025 dataset (Scientific Data, 2026), CC BY 4.0</a> · Illustration: sampled so that one class is rare<span class="fig__hint"> · Hover to separate the layers</span></p>
+  </figcaption>
+</figure>
+
+      </div>
+    </section>
+
+    
+    <section class="chapter chapter--explain" id="explainability" aria-labelledby="explain-heading">
+      <div class="chapter__sticky chapter__sticky--split">
+        
+<figure class="explain" data-anim="explain" id="explain">
+  <div class="explain__stage">
+    <div class="explain__stack" style="aspect-ratio: 1120 / 841">
+      <img class="explain__layer explain__image" src="/static/img/explain/ISIC_0000022.webp" alt="Dermoscopy photo of a biopsy-confirmed melanoma in situ (ISIC_0000022) with its border traced and an explanation heatmap that covers 75% of the lesion."
+           width="1120" height="841" loading="lazy" decoding="async">
+      <img class="explain__layer explain__heat explain__heat--narrow" style="--z: 10" src="/static/img/explain/ISIC_0000022-heat-narrow.webp"
+           alt="" aria-hidden="true" loading="lazy" decoding="async">
+      <img class="explain__layer explain__heat explain__heat--fixed" style="--z: 10" src="/static/img/explain/ISIC_0000022-heat-fixed.webp"
+           alt="" aria-hidden="true" loading="lazy" decoding="async">
+
+      <svg class="explain__layer explain__border" style="--z: 18" viewBox="0 0 1120 841" aria-hidden="true">
+        <polygon points="705.2,110.6 715.8,107.9 726.2,110.2 736.8,114.5 747.2,120.0 757.8,125.0 768.2,131.2 776.8,139.0 782.6,148.8 784.2,159.2 781.5,169.8 774.9,180.2 767.1,190.8 760.5,201.2 755.4,211.8 752.7,222.2 753.5,232.8 759.3,242.5 768.2,249.5 778.8,253.0 789.2,254.1 799.8,256.5 810.2,261.9 820.8,269.7 831.2,277.5 841.8,283.7 852.2,288.8 862.8,293.8 872.5,300.8 881.0,309.8 887.6,320.2 893.5,330.8 898.5,341.2 902.8,351.8 906.3,362.2 910.2,372.8 916.4,383.2 923.0,393.8 926.9,404.2 925.8,414.8 920.7,425.2 914.1,435.8 908.6,446.2 905.5,456.8 904.4,467.2 902.8,477.8 899.7,488.2 895.0,498.8 889.6,509.2 882.2,519.0 873.2,528.3 862.8,537.6 852.2,546.6 841.8,552.4 831.2,554.8 820.8,555.5 810.2,559.0 799.8,566.0 790.8,575.8 784.6,586.2 779.9,596.8 773.7,604.9 764.8,610.4 754.2,613.1 743.8,615.8 733.2,619.3 722.8,623.6 712.2,627.9 701.8,629.4 691.2,631.0 680.8,634.5 671.0,642.6 661.7,652.0 652.4,659.8 642.2,665.6 631.8,669.9 621.2,672.6 610.8,673.8 600.2,673.0 589.8,671.0 579.2,668.3 568.8,665.6 558.2,664.0 547.8,663.2 537.2,663.2 526.8,662.1 516.2,661.7 505.8,662.5 495.2,665.6 484.8,667.5 474.2,665.6 463.8,659.0 453.2,650.8 442.8,645.0 432.2,642.6 421.8,641.5 411.2,638.8 400.8,634.5 390.2,630.6 379.8,628.6 369.2,628.2 358.8,628.2 348.2,627.5 337.8,625.1 327.2,619.3 316.8,611.5 306.2,603.8 295.8,597.5 286.0,590.9 277.5,582.4 269.3,573.8 260.4,565.6 251.4,557.5 244.4,547.8 240.9,537.2 240.1,526.8 241.7,516.2 244.4,505.8 247.5,495.2 249.5,484.8 247.9,474.2 242.1,465.3 232.8,459.5 222.2,457.1 211.8,457.1 201.2,457.5 190.8,456.8 180.2,452.9 170.5,445.5 163.1,435.8 158.5,425.2 156.5,414.8 155.4,404.2 154.2,393.8 153.0,383.2 152.2,372.8 152.2,362.2 153.0,351.8 156.5,342.0 163.5,334.6 173.2,329.6 183.8,324.5 194.2,319.1 204.8,314.8 215.2,313.2 225.8,312.5 236.2,310.5 246.8,307.8 257.2,305.1 267.8,303.5 278.2,302.8 288.8,302.0 299.2,299.2 309.8,293.4 319.9,284.9 329.2,274.8 338.5,264.2 347.1,253.8 356.4,244.0 365.8,237.0 376.2,233.5 386.8,232.4 397.2,230.0 407.0,224.2 416.3,215.6 425.6,206.3 434.6,197.8 443.9,191.5 453.2,189.2 463.8,193.1 474.2,199.7 484.8,205.5 495.2,206.7 505.8,205.9 516.2,204.8 526.8,204.4 537.2,202.4 547.8,198.5 558.2,193.9 568.8,191.1 579.2,191.1 589.8,192.7 600.2,193.1 610.8,191.9 621.2,188.4 631.8,183.4 642.2,176.8 652.8,168.6 662.5,159.2 671.4,148.8 679.2,138.2 687.0,127.8 695.5,117.6" style="stroke-dasharray: 2208; --len: 2208"/>
+      </svg>
+
+      <div class="explain__layer explain__tags" style="--z: 28" aria-hidden="true">
+        <span class="explain__tag explain__tag--truth">Biopsy · melanoma in situ</span>
+        <span class="explain__tag explain__tag--flag">⚠ Explanation check failed · flagged</span>
+        <span class="explain__tag explain__tag--right">✓ Right answer, right reason</span>
+      </div>
+
+      <svg class="explain__layer explain__hits" style="--z: 18" viewBox="0 0 1120 841" aria-hidden="true">
+        <polygon points="705.2,110.6 715.8,107.9 726.2,110.2 736.8,114.5 747.2,120.0 757.8,125.0 768.2,131.2 776.8,139.0 782.6,148.8 784.2,159.2 781.5,169.8 774.9,180.2 767.1,190.8 760.5,201.2 755.4,211.8 752.7,222.2 753.5,232.8 759.3,242.5 768.2,249.5 778.8,253.0 789.2,254.1 799.8,256.5 810.2,261.9 820.8,269.7 831.2,277.5 841.8,283.7 852.2,288.8 862.8,293.8 872.5,300.8 881.0,309.8 887.6,320.2 893.5,330.8 898.5,341.2 902.8,351.8 906.3,362.2 910.2,372.8 916.4,383.2 923.0,393.8 926.9,404.2 925.8,414.8 920.7,425.2 914.1,435.8 908.6,446.2 905.5,456.8 904.4,467.2 902.8,477.8 899.7,488.2 895.0,498.8 889.6,509.2 882.2,519.0 873.2,528.3 862.8,537.6 852.2,546.6 841.8,552.4 831.2,554.8 820.8,555.5 810.2,559.0 799.8,566.0 790.8,575.8 784.6,586.2 779.9,596.8 773.7,604.9 764.8,610.4 754.2,613.1 743.8,615.8 733.2,619.3 722.8,623.6 712.2,627.9 701.8,629.4 691.2,631.0 680.8,634.5 671.0,642.6 661.7,652.0 652.4,659.8 642.2,665.6 631.8,669.9 621.2,672.6 610.8,673.8 600.2,673.0 589.8,671.0 579.2,668.3 568.8,665.6 558.2,664.0 547.8,663.2 537.2,663.2 526.8,662.1 516.2,661.7 505.8,662.5 495.2,665.6 484.8,667.5 474.2,665.6 463.8,659.0 453.2,650.8 442.8,645.0 432.2,642.6 421.8,641.5 411.2,638.8 400.8,634.5 390.2,630.6 379.8,628.6 369.2,628.2 358.8,628.2 348.2,627.5 337.8,625.1 327.2,619.3 316.8,611.5 306.2,603.8 295.8,597.5 286.0,590.9 277.5,582.4 269.3,573.8 260.4,565.6 251.4,557.5 244.4,547.8 240.9,537.2 240.1,526.8 241.7,516.2 244.4,505.8 247.5,495.2 249.5,484.8 247.9,474.2 242.1,465.3 232.8,459.5 222.2,457.1 211.8,457.1 201.2,457.5 190.8,456.8 180.2,452.9 170.5,445.5 163.1,435.8 158.5,425.2 156.5,414.8 155.4,404.2 154.2,393.8 153.0,383.2 152.2,372.8 152.2,362.2 153.0,351.8 156.5,342.0 163.5,334.6 173.2,329.6 183.8,324.5 194.2,319.1 204.8,314.8 215.2,313.2 225.8,312.5 236.2,310.5 246.8,307.8 257.2,305.1 267.8,303.5 278.2,302.8 288.8,302.0 299.2,299.2 309.8,293.4 319.9,284.9 329.2,274.8 338.5,264.2 347.1,253.8 356.4,244.0 365.8,237.0 376.2,233.5 386.8,232.4 397.2,230.0 407.0,224.2 416.3,215.6 425.6,206.3 434.6,197.8 443.9,191.5 453.2,189.2 463.8,193.1 474.2,199.7 484.8,205.5 495.2,206.7 505.8,205.9 516.2,204.8 526.8,204.4 537.2,202.4 547.8,198.5 558.2,193.9 568.8,191.1 579.2,191.1 589.8,192.7 600.2,193.1 610.8,191.9 621.2,188.4 631.8,183.4 642.2,176.8 652.8,168.6 662.5,159.2 671.4,148.8 679.2,138.2 687.0,127.8 695.5,117.6" data-label-narrow="Lesion · only 6% covered by the explanation" data-label-fixed="Lesion · 75% covered by the explanation"/>
+      </svg>
+    </div>
+    <div class="explain__tip" aria-hidden="true"></div>
+  </div>
+  <figcaption>
+    <div class="explain__stats" data-narrow="6" data-fixed="75">
+      <p class="stat">
+        <span class="stat__value explain__answers">
+          <span class="explain__answer explain__answer--wrong">Nevus <small>benign</small> <span class="explain__cross">✕</span></span>
+          <span class="explain__answer explain__answer--right">Melanoma ✓</span>
+        </span>
+        <span class="stat__label">Model's answer</span>
+      </p>
+      <p class="stat"><span class="stat__value" data-stat="explained">75%</span><span class="stat__label">Lesion explained</span></p>
+    </div>
+    <ol class="fig__steps">
+      <li data-step="0"><span class="fig__step-text"><span class="fig__step-num">1</span>The answer</span><span class="fig__step-bar"></span></li><li data-step="1"><span class="fig__step-text"><span class="fig__step-num">2</span>Check why</span><span class="fig__step-bar"></span></li><li data-step="2"><span class="fig__step-text"><span class="fig__step-num">3</span>Correct it</span><span class="fig__step-bar"></span></li>
+    </ol>
+    <p class="fig__credit"><a href="https://api.isic-archive.com/images/ISIC_0000022/" target="_blank" rel="noopener">Image: ISIC Archive, ISIC_0000022, CC0</a> · Illustration: heatmaps drawn to show the idea, not from a trained model<span class="fig__hint"> · Hover to separate the layers</span></p>
+  </figcaption>
+</figure>
+
+        <div class="chapter__text" data-anim="explain-text">
+          <p class="eyebrow">Explainability</p>
+          <h2 id="explain-heading">Checking the reason, not just the answer</h2>
+          <p>A confident answer can still be wrong. Here a classifier calls an early melanoma a harmless mole, and its explanation shows why: it looked at only one small, regular-looking part of the lesion.</p><p>I use explanations as a check, not a decoration. When an explanation does not cover the evidence, the prediction is flagged and corrected, so the model ends up right for the right reason.</p>
+          <p class="legend__title">In this figure</p>
+          <ul class="legend">
+            <li class="legend__item"><span class="legend__swatch legend__swatch--heat" aria-hidden="true"></span>Where the model looked (low → high)</li><li class="legend__item"><span class="legend__swatch legend__swatch--line" aria-hidden="true"></span>Lesion border traced from the photo</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="academic">
+
+    
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <p class="section__label" data-reveal>About</p>
+      <div class="about">
+        <h2 class="section__headline" id="about-heading" data-reveal>Models that hold up on the hard cases.</h2>
+        <div class="about__bio">
+          <p data-reveal>I am an M.Sc. student in Artificial Intelligence and Soft Computing at the University of Tehran, working as a research assistant under the supervision of Dr. Hedieh Sajedi. I hold a B.Sc. in Computer Science from the University of Tabriz.</p><p data-reveal>I am drawn to medical imaging because it is a field where a model&#x27;s mistakes have real consequences, and the hardest cases are often the ones that matter most. My research focuses on building deep learning models that stay reliable on these rare and difficult cases. Alongside research, I work as a Machine Learning Engineer, designing and deploying machine learning systems in industry.</p><p data-reveal>I was born in Urmia and grew up in a small village nearby, surrounded by nature, which is probably where my love for the outdoors comes from. I enjoy challenges of all kinds, in research and in life. Outside of work, I love running and cycling, take part in running competitions whenever I can, and spend my free time hiking in nature.</p>
+          
+          <ul class="affiliations" data-reveal>
+            <li><span>University of Tehran</span><small>M.Sc. &amp; Research Assistant</small></li><li><span>MTN Irancell</span><small>ML Engineer, AI Unit</small></li>
+          </ul>
+          
+        </div>
+      </div>
+      
+      <ul class="highlights">
+        <li data-reveal><span class="highlights__value">8</span><span class="highlights__label">papers, 2 in Scientific Reports</span></li><li data-reveal><span class="highlights__value">7th</span><span class="highlights__label">nationally, Iran&#x27;s PhD entrance exam (CS)</span></li><li data-reveal><span class="highlights__value">2nd</span><span class="highlights__label">of ~120 teams, Iran-Open Computer Vision Challenge</span></li>
+      </ul>
+      
+    </section>
+
+    
+    <section class="section" id="research" aria-labelledby="research-heading">
+      <p class="section__label" data-reveal>Research interests</p>
+      <h2 class="visually-hidden" id="research-heading">Research interests</h2>
+      <ol class="cards cards--3">
+        
+        <li class="card" data-reveal>
+          <span class="card__number">01</span>
+          <h3 class="card__title">Segmentation</h3>
+          <p class="card__text">Outlining anatomy and disease precisely, such as narrowed coronary arteries in angiograms or tumors in MRI, so that measurements and clinical decisions can rely on the boundaries.</p>
+        </li>
+        
+        <li class="card" data-reveal>
+          <span class="card__number">02</span>
+          <h3 class="card__title">Classification on imbalanced data</h3>
+          <p class="card__text">Models that stay accurate on rare diagnostic classes and difficult cases, not only on the common ones that dominate the data.</p>
+        </li>
+        
+        <li class="card" data-reveal>
+          <span class="card__number">03</span>
+          <h3 class="card__title">Explainability</h3>
+          <p class="card__text">Using explanations not just to visualise a prediction, but as a signal to detect when a model is wrong and to correct it.</p>
+        </li>
+        
+      </ol>
+    </section>
+
+    
+    <section class="section" id="projects" aria-labelledby="projects-heading">
+      <div class="section__head">
+        <p class="section__label" data-reveal>Selected papers &amp; projects</p>
+        <a class="link-arrow" href="/publications/" data-reveal>All 8 publications <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+      <h2 class="visually-hidden" id="projects-heading">Selected papers and projects</h2>
+      <div class="cards cards--2">
+        
+        <article class="card project project--brain" data-reveal>
+          <div class="project__figure">
+            <span aria-hidden="true">NeXtSwin-X</span>
+          </div>
+          <p class="project__meta"><span class="chip">Scientific Reports</span>2026</p>
+          <h3 class="card__title">NeXtSwin-X</h3>
+          <p class="project__authors">A. Nasr Esfahani, <strong>A. Jalili</strong>, H. Sajedi</p>
+          <ul class="tags"><li>MRI &amp; CT</li><li>Tumor classification</li><li>Cross-attention</li></ul>
+          <p class="card__text">One classifier for brain tumors in two kinds of scans, MRI and CT. Two branches exchange information through cross-attention before deciding.</p>
+          
+          <p class="project__links"><a href="https://doi.org/10.1038/s41598-026-50158-1" target="_blank" rel="noopener">Paper <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></p>
+          
+        </article>
+        
+        <article class="card project project--brain" data-reveal>
+          <div class="project__figure">
+            <span aria-hidden="true">HSegFormer</span>
+          </div>
+          <p class="project__meta"><span class="chip">Scientific Reports</span>2026</p>
+          <h3 class="card__title">HSegFormer</h3>
+          <p class="project__authors">B. Niknam, <strong>A. Jalili</strong>, H. Sajedi</p>
+          <ul class="tags"><li>Brain MRI</li><li>Segmentation</li><li>Stage attention</li></ul>
+          <p class="card__text">Pixel-level segmentation of brain tumors in MRI. Stage attention weighs coarse and fine levels of detail to draw accurate tumor borders.</p>
+          
+          <p class="project__links"><a href="https://doi.org/10.1038/s41598-026-67758-6" target="_blank" rel="noopener">Paper <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></p>
+          
+        </article>
+        
+        <article class="card project project--heart" data-reveal>
+          <div class="project__figure">
+            <span aria-hidden="true">VALF</span>
+          </div>
+          <p class="project__meta"><span class="chip">EJMCA</span>2025</p>
+          <h3 class="card__title">VALF</h3>
+          <p class="project__authors">K. Vajedsamie, <strong>A. Jalili</strong>, H. Sajedi, Ardavan D., Azamat A.</p>
+          <ul class="tags"><li>Histopathology</li><li>Class imbalance</li><li>Loss function</li></ul>
+          <p class="card__text">A focal loss whose focusing parameter is adapted from a validation signal during training, targeting rare diagnostic classes in histopathology.</p>
+          
+          <p class="project__links"><a href="https://doi.org/10.32523/2306-6172-2025-13-4-128-140" target="_blank" rel="noopener">Paper <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></p>
+          
+        </article>
+        
+        <article class="card project project--heart" data-reveal>
+          <div class="project__figure">
+            <span aria-hidden="true">XAI-guided correction</span>
+          </div>
+          <p class="project__meta"><span class="chip">Inform. Med. Unlocked</span>Under review</p>
+          <h3 class="card__title">XAI-guided correction</h3>
+          <p class="project__authors">Y. Azizi Movahed, <strong>A. Jalili</strong>, H. Sajedi</p>
+          <ul class="tags"><li>Explainability</li><li>Error correction</li><li>Multi-class</li></ul>
+          <p class="card__text">Checks whether the model&#x27;s explanation points at the right evidence, and uses that check to correct wrong predictions.</p>
+          
+        </article>
+        
+      </div>
+    </section>
+
+    
+    <section class="section" id="cv" aria-labelledby="cv-heading">
+      <div class="section__head">
+        <p class="section__label" data-reveal>CV</p>
+        <a class="btn btn--primary" href="#contact" data-cv-request data-reveal>Request full CV <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></a>
+      </div>
+      <h2 class="visually-hidden" id="cv-heading">Curriculum vitae</h2>
+      <div class="cv">
+        <div class="cv__block" data-reveal><h3>Education</h3>
+<ol class="timeline">
+  
+  <li class="timeline__item">
+    <span class="timeline__when">Sep 2023 – Feb 2027 (expected)</span>
+    <div>
+      <p class="timeline__title">M.Sc. in Artificial Intelligence and Soft Computing</p>
+      <p class="timeline__place">University of Tehran</p>
+      <p class="timeline__detail">Thesis: stenosis detection in coronary angiograms · Supervisor: Dr. Hedieh Sajedi</p>
+    </div>
+  </li>
+  
+  <li class="timeline__item">
+    <span class="timeline__when">2019 – 2023</span>
+    <div>
+      <p class="timeline__title">B.Sc. in Computer Science</p>
+      <p class="timeline__place">University of Tabriz</p>
+      
+    </div>
+  </li>
+  
+</ol>
+</div>
+        <div class="cv__block" data-reveal><h3>Experience</h3>
+<ol class="timeline">
+  
+  <li class="timeline__item">
+    <span class="timeline__when">Dec 2023 – present</span>
+    <div>
+      <p class="timeline__title">Research Assistant</p>
+      <p class="timeline__place">University of Tehran</p>
+      <p class="timeline__detail">Medical image segmentation · Classification · Explainability</p>
+    </div>
+  </li>
+  
+  <li class="timeline__item">
+    <span class="timeline__when">Feb 2025 – present</span>
+    <div>
+      <p class="timeline__title">Machine Learning Engineer &amp; Data Analyst</p>
+      <p class="timeline__place">MTN Irancell, AI Unit</p>
+      <p class="timeline__detail">Time-series forecasting · Anomaly detection</p>
+    </div>
+  </li>
+  
+  <li class="timeline__item">
+    <span class="timeline__when">Feb 2024 – Feb 2025</span>
+    <div>
+      <p class="timeline__title">Machine Learning Engineer</p>
+      <p class="timeline__place">Golrang System</p>
+      <p class="timeline__detail">Image processing · LLMs</p>
+    </div>
+  </li>
+  
+</ol>
+</div>
+        <div class="cv__block" data-reveal><h3>Skills</h3><p class="cv__text">Python, PyTorch, TensorFlow/Keras, Hugging Face Transformers, LangChain, OpenCV, scikit-learn, Git</p></div>
+        <div class="cv__block" data-reveal><h3>Languages</h3><p class="cv__text">Persian (native), Turkish (native), English (professional)</p></div>
+      </div>
+    </section>
+
+    
+    <section class="section" id="news" aria-labelledby="news-heading">
+      <p class="section__label" data-reveal>News</p>
+      <h2 class="visually-hidden" id="news-heading">News</h2>
+      <ul class="news">
+        
+        <li class="news__item" data-reveal>
+          <span class="news__date">2026</span>
+          <span class="news__text">Looking for PhD positions starting in 2027.</span>
+        </li>
+        
+        <li class="news__item" data-reveal>
+          <span class="news__date">2026</span>
+          <span class="news__text"><a href="https://doi.org/10.1038/s41598-026-67758-6" target="_blank" rel="noopener">HSegFormer published in Scientific Reports.</a></span>
+        </li>
+        
+        <li class="news__item" data-reveal>
+          <span class="news__date">2026</span>
+          <span class="news__text"><a href="https://doi.org/10.1038/s41598-026-50158-1" target="_blank" rel="noopener">NeXtSwin-X published in Scientific Reports.</a></span>
+        </li>
+        
+        <li class="news__item" data-reveal>
+          <span class="news__date">2025</span>
+          <span class="news__text"><a href="https://doi.org/10.32523/2306-6172-2025-13-4-128-140" target="_blank" rel="noopener">VALF published in the Eurasian Journal of Mathematical and Computer Applications.</a></span>
+        </li>
+        
+        <li class="news__item" data-reveal>
+          <span class="news__date">2025</span>
+          <span class="news__text">Ranked 7th nationally among all Computer Science candidates in Iran&#x27;s PhD entrance exam.</span>
+        </li>
+        
+      </ul>
+    </section>
+
+    
+    <section class="section contact" id="contact" aria-labelledby="contact-heading">
+      <p class="section__label" data-reveal>Contact</p>
+      <h2 class="contact__headline" id="contact-heading" data-reveal>Get in touch.</h2>
+      <p class="contact__text" data-reveal>For research collaborations or PhD opportunities, send me an email.</p>
+      
+      <div class="contact__reveal" data-email-reveal data-reveal>
+        <button class="btn btn--primary" type="button" data-email-show>Show email address <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></button>
+        <div class="contact__revealed" data-email-revealed hidden>
+          <a class="contact__email" href="#contact" data-email-link></a>
+          <button class="btn" type="button" data-email-copy><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg><span data-copy-label>Copy</span></button>
+        </div>
+        <noscript><p class="contact__text">Please turn on JavaScript to see my email address.</p></noscript>
+      </div>
+    </section>
+  </div>
+</main>
+
+
+  
+  <dialog class="modal" id="cv-request" aria-labelledby="cv-request-title">
+    <div class="modal__body">
+      <button class="modal__close" type="button" data-close aria-label="Close"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+      <h2 class="modal__title" id="cv-request-title">CV available on request</h2>
+      <p class="modal__text">My full CV isn&#x27;t available for download on this website, but I&#x27;m happy to send it. Send me an email and I&#x27;ll reply with a copy.</p>
+      <div class="modal__actions">
+        <a class="btn btn--primary" href="/#contact" data-email-link data-subject="CV request via your website" data-body="Hello Amirreza,
+
+I visited your website and would like to request your CV.
+
+Name:
+Affiliation:
+
+Best regards,">Email me <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></a>
+        <button class="btn" type="button" data-email-copy><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg><span data-copy-label>Copy address</span></button>
+      </div>
+      <p class="modal__address" data-email-text></p>
+    </div>
+  </dialog>
+
+  <footer class="footer">
+    <p>© 2026 Amirreza Jalili</p>
+    <ul class="socials socials--small" aria-label="Profiles">
+      <li><a href="https://scholar.google.com/citations?user=8gmACFUAAAAJ&amp;hl=en" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg></a></li>
+<li><a href="https://github.com/AmirrezaJalili" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a></li>
+<li><a href="https://www.researchgate.net/profile/Amirreza-Jalili-2" target="_blank" rel="noopener" aria-label="ResearchGate" title="ResearchGate"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0-.112.437 8.365 8.365 0 0 0-.078.53 9 9 0 0 0-.05.727c-.01.282-.013.621-.013 1.016a31.121 31.123 0 0 0 .014 1.017 9 9 0 0 0 .05.727 7.946 7.946 0 0 0 .077.53h-.005a3.334 3.334 0 0 0 .113.438c.245.743.65 1.303 1.214 1.68.565.376 1.256.564 2.075.564.8 0 1.536-.213 2.105-.603.57-.39.94-.916 1.175-1.65.076-.235.135-.558.177-.93a10.9 10.9 0 0 0 .043-1.207v-.82c0-.095-.047-.142-.14-.142h-3.064c-.094 0-.14.047-.14.141v.956c0 .094.046.14.14.14h1.666c.056 0 .084.03.084.086 0 .36 0 .62-.036.865-.038.244-.1.447-.147.606-.108.385-.348.664-.638.876-.29.212-.738.35-1.227.35-.545 0-.901-.15-1.21-.353-.306-.203-.517-.454-.67-.915a3.136 3.136 0 0 1-.147-.762 17.366 17.367 0 0 1-.034-.656c-.01-.26-.014-.572-.014-.939a26.401 26.403 0 0 1 .014-.938 15.821 15.822 0 0 1 .035-.656 3.19 3.19 0 0 1 .148-.76 1.89 1.89 0 0 1 .742-1.01c.344-.244.593-.352 1.137-.352.508 0 .815.096 1.144.303.33.207.528.492.764.925.047.094.111.118.198.07l1.044-.43c.075-.048.09-.115.042-.199a3.549 3.549 0 0 0-.466-.742 3 3 0 0 0-.679-.607 3.313 3.313 0 0 0-.903-.41A4.068 4.068 0 0 0 19.586 0zM8.217 5.836c-1.69 0-3.036.086-4.297.086-1.146 0-2.291 0-3.007-.029v.831l1.088.2c.744.144 1.174.488 1.174 2.264v11.288c0 1.777-.43 2.12-1.174 2.263l-1.088.2v.832c.773-.029 2.12-.086 3.465-.086 1.29 0 2.951.057 3.667.086v-.831l-1.49-.2c-.773-.115-1.174-.487-1.174-2.264v-4.784c.688.057 1.29.057 2.206.057 1.748 3.123 3.41 5.472 4.355 6.56.86 1.032 2.177 1.691 3.839 1.691.487 0 1.003-.086 1.318-.23v-.744c-1.031 0-2.063-.716-2.808-1.518-1.26-1.376-2.95-3.582-4.355-6.074 2.32-.545 4.04-2.722 4.04-4.9 0-3.208-2.492-4.698-5.758-4.698zm-.515 1.29c2.406 0 3.839 1.26 3.839 3.552 0 2.263-1.547 3.782-4.097 3.782-.974 0-1.404-.03-2.063-.086v-7.19c.66-.059 1.547-.059 2.32-.059z"/></svg></a></li>
+<li><a href="https://www.linkedin.com/in/Amirreza-Jalili" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.84-2.05 3.79-2.05C21.4 8.65 22 11.1 22 14.3V21h-4v-5.9c0-1.4-.03-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1V21h-4z"/></svg></a></li>
+
+<li><a href="/#contact" aria-label="Email (contact section)" title="Email"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></a></li>
+
+    </ul>
+  </footer>
+
+  
+<script type="module" src="/static/js/main.js?v=ddcae3d911"></script>
+
+</body>
+</html>
